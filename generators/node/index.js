@@ -11,9 +11,6 @@ module.exports = class extends Generator {
           {
             name: "eslint",
             checked: true,
-          },
-          {
-            name: "snippets",
           }
         ],
       },
@@ -27,18 +24,11 @@ module.exports = class extends Generator {
             name: "typescript",
           },
           {
-            name: "next",
-          },
-          {
             name: "javascript",
           },
         ],
       },
-    ]);
-
-    if (answers.features.includes("snippets")) {
-      this.composeWith(require.resolve("./snippets"));
-    }
+    ])
 
     if (answers.eslint) {
       this.composeWith(require.resolve("./eslint/simple"));
@@ -49,10 +39,6 @@ module.exports = class extends Generator {
 
       if (answers.eslint.includes("typescript")) {
         this.composeWith(require.resolve("./eslint/typescript"));
-      }
-
-      if (answers.eslint.includes("next")) {
-        this.composeWith(require.resolve("./eslint/next"));
       }
     }
   }

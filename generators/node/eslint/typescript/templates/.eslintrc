@@ -5,28 +5,18 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:node/recommended"
   ],
-  "plugins": ["react", "prettier", "import"],
+  "plugins": ["prettier", "import", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
+    "ecmaVersion": 13,
     "sourceType": "module"
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "rules": {
-    "no-console": "warn",
-    "react/prop-types": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
     "prettier/prettier": [
       "warn",
       {
@@ -40,7 +30,7 @@
         "endOfLine":"auto"
       }
     ],
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "args": "after-used",
@@ -57,16 +47,6 @@
       }],
       "newlines-between": "always"
     }],
-    "react/self-closing-comp": "warn",
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "shorthandFirst": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
-      }
-    ],
     "padding-line-between-statements": [
       "warn",
       {"blankLine": "always", "prev": "*", "next": "return"},

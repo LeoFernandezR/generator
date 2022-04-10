@@ -1,20 +1,12 @@
-# Yeoman Goncy generator
-Yeoman generator for eslint and react things
+# Yeoman Leonardo generator
+Yeoman generator for eslint, typescript and stuff
 
+Based on generator-goncy:
+https://github.com/goncy/generator
 ## Generators
 ```
-yo goncy:dva
-yo goncy:eslint-node
-yo goncy:eslint-react
-yo goncy:eslint-svelte
-yo goncy:eslint-vue
-yo goncy:firebase-auth
-yo goncy:plop-react
-yo goncy:redux
-yo goncy:redux-saga
-yo goncy:redux-services
-yo goncy:root-provider
-yo goncy:root-routes
-yo goncy:snippets-react
-yo goncy:tailwind
+yo leonardof:eslint-svelte
+yo leonardof:eslint-vue
+yo leonardof:react
+yo leonardof:node
 ```
