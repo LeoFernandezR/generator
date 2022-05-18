@@ -15,19 +15,18 @@ module.exports = class extends Generator {
         "@typescript-eslint/eslint-plugin",
         "typescript",
         "ts-node-dev",
-        "@types/node", 
-        "@tsconfig/node16"
+        "@types/node",
+        "@tsconfig/node16",
       ],
       {"save-dev": true}
     );
   }
 
-  typeScript () {
-    this.fs.copy(this.templatePath(".tsconfig.json")), this.destinationPath(".tsconfig.json")  
+  typescript() {
+    this.fs.copy(this.templatePath(".tsconfig.json"), this.destinationPath(".tsconfig.json"));
   }
 
   eslint() {
     this.fs.copy(this.templatePath(".eslintrc"), this.destinationPath(".eslintrc"));
   }
-  
 };
