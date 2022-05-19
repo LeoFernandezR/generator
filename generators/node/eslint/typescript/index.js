@@ -23,7 +23,7 @@ module.exports = class extends Generator {
   }
 
   typescript() {
-    this.fs.copy(this.templatePath(".tsconfig.json"), this.destinationPath(".tsconfig.json"));
+    this.fs.copy(this.templatePath("tsconfig.json"), this.destinationPath("tsconfig.json"));
   }
 
   eslint() {
